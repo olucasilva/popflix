@@ -7,6 +7,7 @@ body {
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
+<<<<<<< HEAD
   background: rgb(0,0,0);
   background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0.896796218487395) 50%, rgba(0,0,0,1) 100%);
   color: #e5e5e5;
@@ -15,17 +16,34 @@ h1 {
   font-size: 4.5rem;
   color: #ff0000;
   margin-left: 20px; 
+=======
+  background: #000;
+  font-family: 'Netflix Sans ';
+  color: #e5e5e5;
+}
+h1 {
+  font-size: 2.5rem;
+  color: #ff0000;
+>>>>>>> 0a4beb910a75dca80f5712ef4d7149cd50a7db7a
 }
 h2 {
   font-weight: 700;
   font-size: 1.5em;
   line-height: 46px;
+<<<<<<< HEAD
   margin-left: 20px; 
+=======
+  margin-left: 20px;
+>>>>>>> 0a4beb910a75dca80f5712ef4d7149cd50a7db7a
 }
 #container {
   width: 100vw;
   height: 100vh;
+<<<<<<< HEAD
   margin: 10px 0;
+=======
+  margin: 10px;
+>>>>>>> 0a4beb910a75dca80f5712ef4d7149cd50a7db7a
 }
 .movies-rows {
   margin-bottom: 15px;
@@ -33,6 +51,10 @@ h2 {
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
+<<<<<<< HEAD
+=======
+  height: 60vh;
+>>>>>>> 0a4beb910a75dca80f5712ef4d7149cd50a7db7a
 }
 
 .movies-rows:hover,
@@ -65,12 +87,15 @@ h2 {
 .element-movie img:hover {
   transform: scale(0.83);
   box-shadow: 0px 0px 33px 0px rgb(52, 51, 51);
+<<<<<<< HEAD
 }
 .movie-details{
   width: 100vw;
   height: 55vh;
   background-color: grey;
   display: none;
+=======
+>>>>>>> 0a4beb910a75dca80f5712ef4d7149cd50a7db7a
 }
 .show{
   display: block;
