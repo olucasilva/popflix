@@ -1,0 +1,154 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Poppins', sans-serif;
+  color: #1C1C1C;
+}
+
+body {
+  background-color: #fff;
+}
+
+section {
+  margin: 0 auto;
+  width: 50vw;
+  background-color: #aabbc2;
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+  font-size: 0.8rem;
+}
+
+@media (min-height: 800px) {
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+legend {
+  font: 600 3.5rem 'Poppins', sans-serif;
+  padding: 0 0 3vh 0;
+  text-align: center;
+}
+
+form {
+  width: 80%;
+  margin: auto;
+  padding: 3vh 3vw;
+}
+
+.div-input {
+  margin: 0 auto;
+  min-width: 100%;
+}
+.div-file{
+  margin: 0 auto;
+  min-width: 100%;
+  display: flex;
+}
+label {
+  font: 600 1.2rem 'Poppins', sans-serif;
+}
+
+input {
+  min-height: 2.74vh;
+  width: calc(100% - 12px);
+  background-color: #e7e0e0;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  padding: 0.8vh 0.4vw;
+  cursor: pointer;
+  outline: none;
+}
+
+input:hover {
+  border: 1px solid #000000d6;
+}
+
+.botao-selecionar {
+  font: 100 1rem 'Poppins', sans-serif;
+}
+
+.input-file {
+  display: none;
+}
+
+.div-input-file {
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #e7e0e0;
+  color: #000;
+  display: flex;
+  padding: 0.8vh 0.4vw;
+  height: 2.74vh;
+  text-align: center;
+  width: 50%;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  align-items: center;
+}
+
+.div-input-file:hover {
+  cursor: pointer;
+  border: 1px solid #000000d6;
+}
+
+.input-personalizado{
+  cursor: pointer;
+}
+
+button {
+  overflow: hidden;
+  min-width: 15vw;
+  height: 8vh;
+  background: #696969;
+  display: block;
+  margin: 0 auto;
+  padding: 0.8vh 0.4vw;
+  text-align: center;
+  font: 600 1.5rem 'Poppins', sans-serif;
+  color: #fff;
+  border: 0px solid transparent;
+}
+
+button:hover {
+  cursor: pointer;
+  border: 1px solid #000;
+  background: #1C1C1C;
+}
+
+hr {
+  width: 100%;
+}
+img{
+  max-height: 100%;
+  max-width: 4.34vh;
+  margin-left: 1%;
+  border-radius: 3px;
+}
+footer{
+  
+  margin-top: 10px;
+  background-color: gray;
+  padding: 10px;
+}
+footer >div{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 5px;
+}
+footer div p{
+  color: #fff;
+  text-align: center;
+}
+.copy{
+  text-align: start;
+}
+.is-invalid{
+  border: 2px solid red;
+}
+.is-valid{
+  border: 2px solid green;
+}

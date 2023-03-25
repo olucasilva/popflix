@@ -13,27 +13,29 @@
       <h1>PobreFlix
       </h1>
 <?php
-    echo "<div class='movies-rows'>
+echo "<div class='movies-rows'>
     <div class='movies-list'>";
-    for ($j=0; $j < 5; $j++) { 
-        $id = 5;
-        include 'components/elementMovie.php';
-    }
-    echo "</div>";
-    echo "</div>";
-    include 'components/movieDetails.php';
+for ($j = 0; $j < 5; $j++) {
+  $id = 5;
+  include 'components/php/elementMovie.php';
+}
+echo "</div>";
+echo "</div>";
+include 'components/php/movieDetails.php';
 
-    echo "<div class='movies-rows'>
+echo "<div class='movies-rows'>
     <div class='movies-list'>";
-    for ($j=5; $j < 10; $j++) { 
-        $id = 10;
-        include 'components/elementMovie.php';
-    }
-    $id = $j;
-    echo "</div>";
-    echo "</div>";
-    include 'components/movieDetails.php';
+for ($j = 5; $j < 10; $j++) {
+  $id = 10;
+  include 'components/php/elementMovie.php';
+}
+$id = $j;
+echo "</div>";
+echo "</div>";
+include 'components/php/movieDetails.php';
 ?>
+      
     </section>
+    <div><button><a href="./index_cadastro.html">Comprar</button></div>
   </body>
 </html>
