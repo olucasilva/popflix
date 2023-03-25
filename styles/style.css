@@ -7,10 +7,25 @@ body {
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
+  background: rgb(0,0,0);
+  background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0.896796218487395) 50%, rgba(0,0,0,1) 100%);
+  color: #e5e5e5;
+}
+h1 {
+  font-size: 4.5rem;
+  color: #ff0000;
+  margin-left: 20px; 
+}
+h2 {
+  font-weight: 700;
+  font-size: 1.5em;
+  line-height: 46px;
+  margin-left: 20px; 
 }
 #container {
   width: 100vw;
   height: 100vh;
+  margin: 10px 0;
 }
 .movies-rows {
   margin-bottom: 15px;
@@ -18,78 +33,45 @@ body {
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
-  height: 40.3vh;
-}
-.movies-Left,
-.movies-Right {
-  width: 3vw;
-  height: 28.77vh;
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
-  position: absolute;
-  z-index: 99;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  transform: translateY(18px);
-  transition: all ease 0.3s;
-}
-.movies-rows:hover .movies-Left,
-.movies-rows:hover .movies-Right {
-  opacity: 1;
-}
-a > .arrow {
-  width: 4vw;
-  padding: 10px;
 }
 
-.movies-Left {
-  left: 0;
+.movies-rows:hover,
+.movies-rows:hover {
+  opacity: 1;
 }
-.movies-Right {
-  right: 0;
-}
-.movies-listArea {
-  height: 100%;
-}
+
 .movies-list {
   width: 999999px;
   display: flex;
-  height: 100%;
+  height: 48vh;
   flex-direction: row;
   transition: all ease 0.3s;
-  margin-top: 8px;
   overflow: hidden;
-  padding-left: 40px;
+  padding-left: 20px;
 }
 .element-movie {
   display: inline-block;
-  height: 28.77vh;
+  height: 55vh;
 }
 .filme {
   -webkit-transform: scale(0.93);
-  transform: scale(0.93);
+  transform: scale(0.8);
   transition: all 0.3s ease;
-  width: 14.64vw;
-  height: 35.97vh;
+  width: 19vw;
+  height: 52vh;
   border: transparent;
   border-radius: 4px;
-  position: static;
 }
 .element-movie img:hover {
-  transform: scale(1.02);
-  box-shadow: 0px 0px 33px 0px black;
+  transform: scale(0.83);
+  box-shadow: 0px 0px 33px 0px rgb(52, 51, 51);
 }
-
-.thumb {
-  width: 10px;
-  height: 50px;
-  background-color: #000;
-  border-radius: 5px;
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-  left: 0;
+.movie-details{
+  width: 100vw;
+  height: 55vh;
+  background-color: grey;
+  display: none;
+}
+.show{
+  display: block;
 }
