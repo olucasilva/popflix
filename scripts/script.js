@@ -1,6 +1,7 @@
 
 function movieDetail(id) {
-  document.cookie = `detailed=${id}`;
+  localStorage.setItem("detailed", id);
+  
   if (id < 5) {
     document.querySelector('#movieDetail5').classList.add('show');
     document.querySelector('#movieDetail10').classList.remove('show');
@@ -12,15 +13,19 @@ function movieDetail(id) {
 function closeMovieDetail() {
   const elements = document.querySelectorAll('.movie-details');
 
-  document.cookie="detailed = null;expires=Sun, 28 Nov 2018 13:15:00 UTC";
+  localStorage.removeItem("detailed");
 
   elements.forEach((element) => {
     element.classList.remove('show');
   });
 }
-function addToChart(id){
-  document.cookie = `${id}=1`;
+function addToChart(){
+  const id = localStorage.getItem('detailed');
+  localStorage.setItem(id,"");
+  alert(`Filme ${id} adicionado ao carrinho.`);
 }
-function removeFromChart(id){
-  cookie.remove(id);
-}
+function removeFromChart(){
+  const id = localStorage.getItem('detailed');
+  localStorage.removeItem(id,"");
+  alert(`Filme ${id} removido do carrinho.`);
+} 

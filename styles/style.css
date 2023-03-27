@@ -90,10 +90,12 @@ h2 {
 .show {
   width: 100vw;
   height: 55vh;
-  background-color: grey;
+  background: rgb(47,47,47);
+  background: linear-gradient(90deg, rgba(47,47,47,1) 0%, rgba(62,62,62,0.8185399159663865) 50%, rgba(47,47,47,1) 100%);
   display: flex;
   flex-direction: row;
-  margin-top: 3.1vh;
+
+  margin: 3.1vh ;
 }
 
 .arrow-box {
@@ -106,14 +108,13 @@ h2 {
 }
 
 .left-arrow {
-  color: black;
+  color: #fff;
   font-size: 35px;
   transition: all 0.3s ease;
   margin: 1vw;
 }
 
 .left-arrow:hover {
-  font-size: 45px;
   color: red;
   cursor: pointer;
 }

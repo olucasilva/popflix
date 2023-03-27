@@ -1,0 +1,13 @@
+header{
+    display: flex;
+    width: 100vw;
+    
+}
+ul{
+    display: flex;
+    list-style: none;
+
+}
+ul>li{
+    width: 25vw;
+}

@@ -13,21 +13,10 @@
         totam assumenda dolor. Mollitia officia pariatur recusandae, minima perferendis autem. Ut perspiciatis autem
         reiciendis temporibus.</p>
     </div>
-    <div>
-    <?php
-    // Isso aqui precisa ser feito com JavaScript
-    
-    // echo $_COOKIE['detailed'];
-    // if(isset($_COOKIE[])){
-    //   echo "<button onclick='removeFromChart($j)'>
-    //   Remover do Carrinho
-    // </button>";
-    // }else{
-    //   echo "<button onclick='addToChart($j)'>
-    //     Adicionar ao Carrinho
-    //   </button>";
-    // }
-    ?>
+    <div id="button">
+      <button onclick="addToChart()">Adicionar ao Carrinho</button>
+      <button onclick="removeFromChart()">Remover do Carrinho</button>
     </div>
+    <div id="isRented"></div>
   </div>
 </div>

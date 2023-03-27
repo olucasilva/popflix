@@ -6,14 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/header.css">
   <script src="scripts/script.js"></script>
 </head>
 
 <body>
   <section id="container">
-    <h1>PobreFlix
-    </h1>
-    <?php
+    <?php 
+    include 'components/header.php';
+
     echo "<div class='movies-rows'>";
     for ($j = 0; $j < 5; $j++) {
       $id = 5;
