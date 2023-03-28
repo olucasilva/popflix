@@ -4,9 +4,9 @@
     </div>
     <nav>
         <ul>
-            <li>Home</li>
-            <li>Most views</li>
-            <li>Contact</li>
+            <li> <a href="">Home</a></li>
+            <li> <a href="">Most View</a></li>
+            <li> <a href="">Contact</a></li>
         </ul>
     </nav>
 </header>

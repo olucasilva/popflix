@@ -14,8 +14,8 @@
         reiciendis temporibus.</p>
     </div>
     <div id="button">
-      <button onclick="addToChart()">Adicionar ao Carrinho</button>
-      <button onclick="removeFromChart()">Remover do Carrinho</button>
+      <button class="addRemove" onclick="addToChart()">Adicionar ao Carrinho</button>
+      <button class="addRemove" onclick="removeFromChart()">Remover do Carrinho</button>
     </div>
     <div id="isRented"></div>
   </div>

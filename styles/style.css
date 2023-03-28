@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Lato', sans-serif;
 }
 
 body {
@@ -22,7 +23,6 @@ h1 {
   font-size: 4.5rem;
   color: #ff0000;
   margin-left: 20px;
-  font-family: 'Netflix Sans ';
 }
 
 h2 {
@@ -90,12 +90,16 @@ h2 {
 .show {
   width: 100vw;
   height: 55vh;
-  background: rgb(47,47,47);
-  background: linear-gradient(90deg, rgba(47,47,47,1) 0%, rgba(62,62,62,0.8185399159663865) 50%, rgba(47,47,47,1) 100%);
+  background: rgb(47, 47, 47);
+  background: linear-gradient(
+    90deg,
+    rgba(47, 47, 47, 1) 0%,
+    rgba(62, 62, 62, 0.8185399159663865) 50%,
+    rgba(47, 47, 47, 1) 100%
+  );
   display: flex;
   flex-direction: row;
-
-  margin: 3.1vh ;
+  margin: 3.1vh;
 }
 
 .arrow-box {
@@ -120,16 +124,30 @@ h2 {
 }
 
 .info {
-  display: flex;
-  flex-direction: column;
   margin: 1vw;
-  justify-content: flex-start;
-  align-items: flex-start;
+  height: 55vh;
 }
 
 .movie-price {
-  height: 30%;
+  height: 8%;
   color: #fff;
-  font-size: 9em;
+  font-size: 5em;
   display: inline-table;
+}
+.movie-description {
+  padding: 10px 0px;
+  margin: 5px 0px;
+  height: 10%;
+}
+.button {
+  height: 40%;
+  margin: 5px 0px;
+}
+.addRemove {
+  margin: 15px 2px;
+  padding: 8px;
+  border-radius: 3.5px;
+}
+.addRemove:hover {
+  background-color: #ff0000;
 }

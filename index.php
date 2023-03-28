@@ -8,11 +8,15 @@
   <link rel="stylesheet" href="styles/style.css" />
   <link rel="stylesheet" href="styles/header.css">
   <script src="scripts/script.js"></script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=PT+Sans&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <section id="container">
-    <?php 
+    <?php
     include 'components/header.php';
 
     echo "<div class='movies-rows'>";
