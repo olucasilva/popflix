@@ -1,13 +1,11 @@
 header {
   display: flex;
-  width: 100vw;
+  width: 95vw;
   align-items: center;
-  margin: 0px 5px;
+  justify-content: space-between;
 }
 nav {
   width: 35vw;
-  position: absolute;
-  right: 0;
 }
 ul {
   display: flex;
@@ -18,12 +16,12 @@ ul {
 ul > li {
   width: 100vw;
 }
-a {
+.navLink {
   text-decoration: none;
   color: #fff;
   font-size: 20px;
 }
-a:hover {
-  transition: 1s all ease;
+.navLink:hover {
+  transition: 1s color ease;
   color: red;
 }
