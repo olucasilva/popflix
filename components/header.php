@@ -13,7 +13,7 @@
     </nav>
     <div>
         <a href="../index_cadastro.html">
-            <img src="../img/shopping-cart (1).png">  
+            <img src="img/shopping-cart.png">  
         </a>
     </div>
 </header>

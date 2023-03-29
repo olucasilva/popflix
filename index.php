@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,7 +9,7 @@
   <link rel="stylesheet" href="styles/style.css" />
   <link rel="stylesheet" href="styles/header.css">
   <script src="scripts/script.js"></script>
-  
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=PT+Sans&display=swap" rel="stylesheet">
@@ -19,22 +20,29 @@
     <?php
     include 'components/header.php';
 
-    echo "<div class='movies-rows'>";
-    for ($j = 0; $j < 5; $j++) {
-      $id = 5;
-      include 'components/elementMovie.php';
-    }
-    echo "</div>";
-    include 'components/movieDetails.php';
+    $moviesData = file_get_contents('data/movies.json');
+    $movieJson = json_decode($moviesData);
 
-    echo "<div class='movies-rows'>";
-    for ($j = 5; $j < 10; $j++) {
-      $id = 10;
+    $i = 0;
+    $detailId = 1;
+
+    foreach ($movieJson as $movie) {
+      if ($i == 0) {
+        echo "<div class='movies-rows'>";
+      }
       include 'components/elementMovie.php';
+      $i++;
+      if ($i == 5) {
+        echo "</div>";
+        include 'components/movieDetails.php';
+        $i = 0;
+        $detailId++;
+      }
     }
-    $id = $j;
-    echo "</div>";
-    include 'components/movieDetails.php';
+    if ($i!=0) {
+      echo "</div>";
+      include 'components/movieDetails.php';
+    }
     ?>
   </section>
 </body>

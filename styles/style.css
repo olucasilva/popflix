@@ -127,12 +127,21 @@ h2 {
 .info {
   margin: 1vw;
   height: 55vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.movie-price {
+.movie-title {
   height: 8%;
   color: #fff;
   font-size: 5em;
+  display: inline-table;
+}
+.movie-price {
+  height: 8%;
+  color: #fff;
+  font-size: 2em;
   display: inline-table;
 }
 .movie-description {
