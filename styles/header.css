@@ -22,6 +22,6 @@ ul > li {
   font-size: 20px;
 }
 .navLink:hover {
-  transition: 1s color ease;
+  transition: 0.5s color ease;
   color: red;
 }
