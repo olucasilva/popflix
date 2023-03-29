@@ -28,7 +28,7 @@
 
     foreach ($movieJson as $movie) {
       if ($i == 0) {
-        echo "<div class='movies-rows'>";
+        echo "<div class='movies-rows' id='row$detailId'>";
       }
       include 'components/elementMovie.php';
       $i++;
@@ -39,11 +39,21 @@
         $detailId++;
       }
     }
-    if ($i!=0) {
+    if ($i != 0) {
       echo "</div>";
       include 'components/movieDetails.php';
     }
     ?>
+    <script>
+      for (let i = 0; i < localStorage.length; i++) {
+        const movie = document.getElementById(localStorage.key(i));
+        try {
+          movie.classList.add('oncart');
+        } catch (error) {
+          console.log(error);
+        }
+      }
+    </script>
   </section>
 </body>
 

@@ -1,5 +1,20 @@
 function movieDetail(id, detailId) {
+  const btnAdd = document.querySelector(`#add${detailId}`);
+  const btnRemove = document.querySelector(`#remove${detailId}`);
+
   localStorage.setItem("detailed", id);
+
+  for (let i = 0; i < localStorage.length; i++) {
+    if (localStorage.key(i) == id) {
+      btnAdd.classList.add('hide');
+      btnRemove.classList.remove('hide');
+      break;
+    } else {
+      btnAdd.classList.remove('hide');
+      btnRemove.classList.add('hide');
+    }
+  }
+
   const details = document.querySelector(`#movieDetail${detailId}`);
   const closeDetails = document.querySelectorAll('.movie-details');
   const moviePoster = document.querySelector(`#moviePoster${detailId}`);
@@ -40,13 +55,28 @@ function closeMovieDetail(detailId) {
     element.classList.remove('show');
   });
 }
-function addToChart() {
+function addToCart(detailId) {
   const id = localStorage.getItem('detailed');
   localStorage.setItem(id, "");
   alert(`Filme ${id} adicionado ao carrinho.`);
+  const btnAdd = document.querySelector(`#add${detailId}`);
+  const btnRemove = document.querySelector(`#remove${detailId}`);
+  const movie = document.getElementById(id);
+
+  movie.classList.add('oncart');
+  btnAdd.classList.add('hide');
+  btnRemove.classList.remove('hide');
 }
-function removeFromChart() {
+function removeFromCart(detailId) {
   const id = localStorage.getItem('detailed');
   localStorage.removeItem(id, "");
   alert(`Filme ${id} removido do carrinho.`);
+  const btnAdd = document.querySelector(`#add${detailId}`);
+  const btnRemove = document.querySelector(`#remove${detailId}`);
+  const movie = document.getElementById(id);
+
+  movie.classList.remove('oncart');
+
+  btnAdd.classList.remove('hide');
+  btnRemove.classList.add('hide');
 } 

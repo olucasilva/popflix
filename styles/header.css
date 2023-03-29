@@ -3,6 +3,9 @@ header {
   width: 95vw;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 20vh;
+  margin-top: 5vh;
+  padding: 1vw;
 }
 nav {
   width: 35vw;
