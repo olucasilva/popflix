@@ -2,15 +2,14 @@
   margin: 0px;
   padding: 0px;
   font-family: 'Poppins', sans-serif;
-  color: #1C1C1C;
+  color: #1c1c1c;
 }
 
 body {
   background-color: #fff;
 }
 
-section{
-  
+section {
   display: flex;
 }
 
@@ -68,21 +67,20 @@ img {
   max-width: 80%;
   max-height: 60%;
 }
-footer{
-  
+footer {
   margin-top: 10px;
   background-color: gray;
   padding: 10px;
 }
-footer >div{
+footer > div {
   display: flex;
   justify-content: space-evenly;
   padding: 5px;
 }
-footer div p{
+footer div p {
   color: #fff;
   text-align: center;
 }
-.copy{
+.copy {
   text-align: start;
 }
