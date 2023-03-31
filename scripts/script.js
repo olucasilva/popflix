@@ -75,7 +75,7 @@ function closeMovieDetail(detailId) {
 function addToCart(detailId) {
   const id = localStorage.getItem('detailed');
   localStorage.setItem(id, "onCart");
-  alert(`Filme ${id} adicionado ao carrinho.`);
+  // alert(`Filme ${id} adicionado ao carrinho.`);
   const btnAdd = document.querySelector(`#add${detailId}`);
   const btnRemove = document.querySelector(`#remove${detailId}`);
   const movie = document.getElementById(id);
@@ -83,13 +83,13 @@ function addToCart(detailId) {
   movie.classList.add('oncart');
   btnAdd.classList.add('hide');
   btnRemove.classList.remove('hide');
-
+  closeMovieDetail(detailId);
   cartUpdate();
 }
 function removeFromCart(detailId) {
   const id = localStorage.getItem('detailed');
   localStorage.removeItem(id, "");
-  alert(`Filme ${id} removido do carrinho.`);
+  // alert(`Filme ${id} removido do carrinho.`);
   const btnAdd = document.querySelector(`#add${detailId}`);
   const btnRemove = document.querySelector(`#remove${detailId}`);
   const movie = document.getElementById(id);

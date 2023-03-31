@@ -11,12 +11,10 @@ body {
   height: 100vh;
   overflow-x: hidden;
   background: rgb(0, 0, 0);
-  background: radial-gradient(
-    circle,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 0.896796218487395) 50%,
-    rgba(0, 0, 0, 1) 100%
-  );
+  background: radial-gradient(circle,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.896796218487395) 50%,
+      rgba(0, 0, 0, 1) 100%);
   color: #e5e5e5;
 }
 
@@ -36,8 +34,9 @@ h2 {
 
 #container {
   width: 100vw;
-  height: 100vh;
-  margin: 10px 0;
+  height: 80vh;
+  position: absolute;
+  bottom: 0;
 }
 
 .movies-rows {
@@ -55,6 +54,13 @@ h2 {
 .element-movie {
   display: flex;
   width: 20%;
+  height: 100%;
+  flex-direction: row;
+  justify-content: center;
+}
+.element-movie>a{
+  display: flex;
+  width: 100%;
   height: 100%;
   flex-direction: row;
   justify-content: center;
@@ -84,23 +90,26 @@ h2 {
   box-shadow: 0px 0px 10px 0px rgb(52, 51, 51);
 }
 
-.hide,.movie-details {
+.hide,
+.movie-details {
   display: none;
+}
+
+.show:target{
+  scroll-margin-top: 30vh;
 }
 
 .show {
   width: 100vw;
   height: 55vh;
   background: rgb(47, 47, 47);
-  background: linear-gradient(
-    90deg,
-    rgba(47, 47, 47, 1) 0%,
-    rgba(62, 62, 62, 0.8185399159663865) 50%,
-    rgba(47, 47, 47, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(47, 47, 47, 1) 0%,
+      rgba(62, 62, 62, 0.8185399159663865) 50%,
+      rgba(47, 47, 47, 1) 100%);
   display: flex;
   flex-direction: row;
-  margin: 3.1vh;
+  margin: 3.1vh 0;
 }
 
 .arrow-box {
@@ -138,21 +147,25 @@ h2 {
   font-size: 5em;
   display: inline-table;
 }
+
 .movie-price {
   height: 8%;
   color: #fff;
   font-size: 2em;
   display: inline-table;
 }
+
 .movie-description {
   padding: 10px 0px;
   margin: 5px 0px;
   height: 10%;
   font-size: 16px;
 }
+
 .button {
   height: 40%;
 }
+
 .add,
 .remove {
   margin: 20px 2px;
@@ -160,6 +173,7 @@ h2 {
   border-radius: 3.5px;
   font-size: 16px;
 }
+
 .remove:hover {
   background-color: #ff0000;
   color: white;
@@ -167,6 +181,7 @@ h2 {
   outline: none;
   cursor: pointer;
 }
+
 .add:hover {
   background-color: #4a4a4a;
   color: white;
@@ -174,6 +189,7 @@ h2 {
   outline: none;
   cursor: pointer;
 }
-.oncart{
+
+.oncart {
   box-shadow: 0px 0px 10px 0px rgb(47, 221, 25);
 }

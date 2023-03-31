@@ -1,7 +1,9 @@
 <div class='movie-details' id='movieDetail<?php echo $detailId ?>'>
-  <a href="#row<?php echo $detailId ?>" style="text-decoration: none"><div class="arrow-box">
-    <label for="left-arrow" class="left-arrow" onclick="closeMovieDetail(<?php echo $detailId ?>)">&#8617;</label>
-  </div></a>
+  <div class="arrow-box">
+    <a href="#row<?php echo $detailId ?>" style="text-decoration: none">
+      <label for="left-arrow" class="left-arrow" onclick="closeMovieDetail(<?php echo $detailId ?>)">&#8617;</label>
+    </a>
+  </div>
   <img class="detail-cover" id="moviePoster<?php echo $detailId ?>" />
   <div class="info">
     <div class="movie-title">
@@ -14,8 +16,10 @@
       <p id="movieDescription<?php echo $detailId ?>"></p>
     </div>
     <div id="button">
-      <button class="add" id="add<?php echo $detailId ?>" onclick="addToCart(<?php echo $detailId ?>)">Adicionar ao Carrinho</button>
-      <button class="remove" id="remove<?php echo $detailId ?>"onclick="removeFromCart(<?php echo $detailId ?>)">Remover do Carrinho</button>
+      <button class="add" id="add<?php echo $detailId ?>" onclick="addToCart(<?php echo $detailId ?>)">Adicionar ao
+        Carrinho</button>
+      <button class="remove" id="remove<?php echo $detailId ?>"
+        onclick="removeFromCart(<?php echo $detailId ?>)">Remover do Carrinho</button>
     </div>
     <div id="isRented"></div>
   </div>

@@ -16,10 +16,11 @@
 </head>
 
 <body onload="cartUpdate()">
+  <?php
+  include 'components/header.php';
+  ?>
   <section id="container">
     <?php
-    include 'components/header.php';
-
     $moviesData = file_get_contents('data/movies.json');
     $movieJson = json_decode($moviesData);
 
