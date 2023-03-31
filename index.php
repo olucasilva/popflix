@@ -15,7 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=PT+Sans&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body onload="cartUpdate()">
   <section id="container">
     <?php
     include 'components/header.php';

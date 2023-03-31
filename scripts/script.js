@@ -1,3 +1,20 @@
+function cartUpdate() {
+  const moviesOnCart = Object.entries(localStorage);
+  let i = 0;
+  // Itera sobre cada item utilizando forEach
+  moviesOnCart.forEach(([key, value]) => {
+    if(value == "onCart"){
+      i++;
+    }
+  });
+  if(i<=9){
+  document.querySelector('#cart').dataset.count = i;
+  }else{
+
+  document.querySelector('#cart').dataset.count = "9+";
+  }
+}
+
 function movieDetail(id, detailId) {
   const btnAdd = document.querySelector(`#add${detailId}`);
   const btnRemove = document.querySelector(`#remove${detailId}`);
@@ -57,7 +74,7 @@ function closeMovieDetail(detailId) {
 }
 function addToCart(detailId) {
   const id = localStorage.getItem('detailed');
-  localStorage.setItem(id, "");
+  localStorage.setItem(id, "onCart");
   alert(`Filme ${id} adicionado ao carrinho.`);
   const btnAdd = document.querySelector(`#add${detailId}`);
   const btnRemove = document.querySelector(`#remove${detailId}`);
@@ -66,6 +83,8 @@ function addToCart(detailId) {
   movie.classList.add('oncart');
   btnAdd.classList.add('hide');
   btnRemove.classList.remove('hide');
+
+  cartUpdate();
 }
 function removeFromCart(detailId) {
   const id = localStorage.getItem('detailed');
@@ -79,4 +98,6 @@ function removeFromCart(detailId) {
 
   btnAdd.classList.remove('hide');
   btnRemove.classList.add('hide');
+  
+  cartUpdate();
 } 

@@ -28,3 +28,30 @@ ul > li {
   transition: 0.5s color ease;
   color: red;
 }
+
+.cart {
+  max-width: 3vw;
+  max-height: 3vw;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart::before {
+  content: attr(data-count);
+  background-color: red;
+  font-size: 12px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.7em;
+  min-height: 1.7em;
+  max-width: 1.7em;
+  max-height: 1.7em;
+  position: sticky;
+  border-radius: 50%;
+  top: 100%;
+  left: 100%;
+}

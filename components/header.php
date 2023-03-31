@@ -11,9 +11,9 @@
             </ul>
         </div>    
     </nav>
-    <div>
-        <a href="../index_cadastro.html">
-            <img src="img/shopping-cart.png">  
+    <div class="cart" id="cart" data-count="0">
+        <a href="./index_cadastro.html">
+            <img src="img/shopping-cart.png">
         </a>
     </div>
 </header>
