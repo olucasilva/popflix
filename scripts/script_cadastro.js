@@ -1,20 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const fileChooser = document.querySelector('.input-file');
-  if (fileChooser) {
-    const $ = document.querySelector.bind(document);
-
-    const previewImg = $('.imagem');
-    const fileChooser = $('.input-file');
-
-    fileChooser.onchange = e => {
-      const fileToUpload = e.target.files.item(0);
-      const reader = new FileReader();
-      reader.onload = e => previewImg.src = e.target.result;
-      reader.readAsDataURL(fileToUpload);
-    };
-  }
-});
-
 window.addEventListener('keydown', validar)
 function validar() {
   $(function inputpassWord() {

@@ -7,10 +7,12 @@ header {
   position: fixed;
   z-index: 2;
   background-color: #000;
-  flex-direction: row;
   align-content: center;
-  flex-wrap: wrap;
   align-items: center;
+}
+h1 {
+  font-size: 4.5rem;
+  color: #ff0000;
 }
 
 nav {
@@ -24,7 +26,7 @@ ul {
   align-items: center;
 }
 
-ul>li {
+ul > li {
   width: 100vw;
 }
 

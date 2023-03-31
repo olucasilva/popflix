@@ -62,42 +62,12 @@ input {
   padding: 0.8vh 0.4vw;
   cursor: pointer;
   outline: none;
+  color: #000;
+  font-weight: bold;
 }
 
 input:hover {
   border: 1px solid #000000d6;
-}
-
-.botao-selecionar {
-  font: 100 1rem 'Poppins', sans-serif;
-}
-
-.input-file {
-  display: none;
-}
-
-.div-input-file {
-  overflow: hidden;
-  white-space: nowrap;
-  background-color: #e7e0e0;
-  color: #000;
-  display: flex;
-  padding: 0.8vh 0.4vw;
-  height: 2.74vh;
-  text-align: center;
-  width: 50%;
-  border: 1px solid transparent;
-  border-radius: 3px;
-  align-items: center;
-}
-
-.div-input-file:hover {
-  cursor: pointer;
-  border: 1px solid #000000d6;
-}
-
-.input-personalizado {
-  cursor: pointer;
 }
 
 button {
@@ -123,16 +93,7 @@ button:hover {
 hr {
   width: 100%;
 }
-img {
-  max-height: 100%;
-  max-width: 4.34vh;
-  margin-left: 1%;
-  border-radius: 3px;
-}
 
-.copy {
-  text-align: start;
-}
 .is-invalid {
   border: 2px solid red;
 }
