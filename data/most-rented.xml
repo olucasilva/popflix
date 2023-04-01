@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <array>
-  <materia>
-    <aula>
-      <titulo> Aula 01 </titulo>
+  <Filmes>
+    <Filme>
+      <titulo> Filme 01 </titulo>
+      <img> img </img>
       <texto> Variáveis </texto>
-    </aula>
-    <aula>
-      <titulo> Aula 02 </titulo>
+      <preco?> Preço </preco>
+    </Filme>
+    <Filme>
+      <titulo> Filme 02 </titulo>
+      <img?> img </img>
       <texto> Estrutura de Decisão </texto>
-    </aula>
-    <aula>
-      <titulo> Aula 03 </titulo>
+      <preco?> Preço </preco>
+    </Filme>
+    <Filme>
+      <titulo> Filme 03 </titulo>
+      <img?> img </img>
       <texto> Estrutura de Repetição </texto>
-    </aula>
-  </materia>
+      <preco?> Preço </preco>
+    </Filme>
+  </Filmes>
 </array>
