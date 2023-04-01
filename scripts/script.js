@@ -85,7 +85,7 @@ function addToCart(detailId) {
   btnRemove.classList.remove('hide');
   closeMovieDetail(detailId);
   cartUpdate();
-  coockies()
+
 }
 function removeFromCart(detailId) {
   const id = localStorage.getItem('detailed');
@@ -102,6 +102,7 @@ function removeFromCart(detailId) {
 
   cartUpdate();
 }
+window.addEventListener('load', coockies())
 function coockies() {
   for (let key in localStorage) {
     if (localStorage.hasOwnProperty(key)) {

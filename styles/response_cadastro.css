@@ -57,7 +57,12 @@ p {
   background-size: cover;
   min-height: 100vh;
   display: flex;
+  flex-wrap: wrap;
   font-size: 1rem;
   justify-content: center;
   align-items: center;
+}
+.moviesPoster {
+  display: flex;
+  overflow: hidden;
 }

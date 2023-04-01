@@ -3,9 +3,13 @@
 
 if (isset($_GET['key']) && isset($_GET['value'])) {
   setcookie($_GET['key'], $_GET['value'], time() + 1800); // expira em 1 hora
-  $cookie_nome = 'detailed';
-  unset($_COOKIE[$cookie_nome]);
-  setcookie($cookie_nome, '', time() - 100000, '/');
+
+  // foreach ($_COOKIE as $key => $ids) {
+  //     if () {
+  //       setcookie($key, "", time() - 3600);
+  //       unset($_COOKIE[$key]);
+  //   }
+  // }
 }
 $firstName = $_POST['first-name'];
 $birthDate = new DateTime($_POST['birth-date']);
@@ -30,7 +34,9 @@ $age = $intervall->format('%y anos');
 </head>
 
 <body onload="cartUpdate()">
+
   <?php
+
   include '../components/header.php';
   $moviesData = file_get_contents('../data/movies.json');
   $movies = json_decode($moviesData, true);
@@ -51,26 +57,27 @@ $age = $intervall->format('%y anos');
     </div>
   </div>
   <?php
+  $i = 0;
   foreach ($movies as $array) {
-    if (in_array($array, $_COOKIE)) {
-      echo "foi";
+    foreach ($_COOKIE as $key => $ids) {
+      if ($array['id'] == $key) {
+        if ($i == 0) {
+          echo "<div class='moviesPoster'>";
+        }
+        $src = $array['poster_path'];
+        include '../components/imgRented.php';
+        $i++;
+        if ($i == 2) {
+          echo '</div>';
+          $i = 0;
+        }
+
+
+      }
     }
+
   }
 
-  // $j = 0;
-  // foreach ($movies as $movie) {
-  //   foreach ($_COOKIE as $nome) {
-  //     if ($movie[$i]['id'] == $_COOKIE[$nome]) {
-  //       $link[$j] = $movie[$i]['poster_path'];
-  //       print_r($link);
-  //       $j++;
-  //     }
-  //   }
-  
-
-  // }
-  
-  include '../components/imgRented.php';
 
   ?>
     
