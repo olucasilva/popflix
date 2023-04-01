@@ -13,7 +13,7 @@
     />
     <script type="text/javascript" src="scripts/script_cadastro.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <title>Pobreflix - Aluguel</title>
+    <title>PopFlix - Carrinho</title>
   </head>
 
   <body>
@@ -82,7 +82,7 @@
         <br />
         <div class="div-input">
           <label for="button" class="button">
-            <button type="submit">ALUGAR</button>
+            <button type="submit" onclick="transferCookies()">ALUGAR</button>
           </label>
         </div>
       </form>

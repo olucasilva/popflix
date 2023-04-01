@@ -6,7 +6,7 @@
   </div>
   <img class="detail-cover" id="moviePoster<?php echo $detailId ?>" />
   <div class="info">
-    <div class="movie-title">
+    <div class="movie-title" id="ts<?php echo $detailId ?>" data-size="">
       <label for="title" id="movieTitle<?php echo $detailId ?>"></label>
     </div>
     <div class="movie-price">

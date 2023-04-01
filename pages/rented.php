@@ -1,6 +1,4 @@
 <?php
-
-
 if (isset($_GET['key']) && isset($_GET['value'])) {
   setcookie($_GET['key'], $_GET['value'], time() + 1800); // expira em 1 hora
 
@@ -25,7 +23,7 @@ $age = $intervall->format('%y anos');
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../styles/response_cadastro.css" />
-  <link rel="stylesheet" href="../styles/header.css"/>
+  <link rel="stylesheet" href="../styles/header.css" />
   <script src="../scripts/script.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -42,45 +40,39 @@ $age = $intervall->format('%y anos');
   $movies = json_decode($moviesData, true);
 
   ?>
-      <section>
-      <div class="container">
-        <div class="divText">
-          <p>
-            <b>
-              <?php echo $firstName . ',' ?>
-            </b>
-      </p>
-      <p>
+  <section>
+    <div class="container">
+      <div class="divText">
+        <p>
+          <b>
+            <?php echo $firstName . ',' ?>
+          </b>
+        </p>
+        <p>
           Obrigado por utilizar a Pobreflix, estes foram os filmes selecionados:
 
-      </p>
+        </p>
+      </div>
     </div>
-  </div>
-  <?php
-  $i = 0;
-  foreach ($movies as $array) {
-    foreach ($_COOKIE as $key => $ids) {
-      if ($array['id'] == $key) {
-        if ($i == 0) {
-          echo "<div class='moviesPoster'>";
+    <?php
+    $i = 0;
+    foreach ($movies as $array) {
+      foreach ($_COOKIE as $key => $ids) {
+        if ($array['id'] == $key) {
+          if ($i == 0) {
+            echo "<div class='moviesPoster'>";
+          }
+          $src = $array['poster_path'];
+          include '../components/imgRented.php';
+          $i++;
+          if ($i == 2) {
+            echo '</div>';
+            $i = 0;
+          }
         }
-        $src = $array['poster_path'];
-        include '../components/imgRented.php';
-        $i++;
-        if ($i == 2) {
-          echo '</div>';
-          $i = 0;
-        }
-
-
       }
     }
-
-  }
-
-
-  ?>
-    
+    ?>
   </section>
 </body>
 

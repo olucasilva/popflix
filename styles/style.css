@@ -146,10 +146,19 @@ h2 {
 }
 
 .movie-title {
-  height: 8%;
   color: #fff;
   font-size: 3em;
   display: inline-table;
+}
+
+.movie-title::after {
+  content: attr(data-size);
+  color: #fff;
+  font-size: 0.4em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .movie-price {
