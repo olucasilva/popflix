@@ -14,13 +14,11 @@ function cartUpdate() {
     document.querySelector('#cart').dataset.count = "9+";
   }
 }
-window.addEventListener('load', coockies())
-function coockies() {
-  for (let key in localStorage) {
-    if (localStorage.hasOwnProperty(key)) {
-      let xhr = new XMLHttpRequest();
-      xhr.open('POST', '../pages/rented.php?key=' + key + '&value=' + localStorage.getItem(key));
-      xhr.send();
-    }
-  }
+function clearCart(){
+  const cart = Object.entries(localStorage);
+  let i = 0;
+  // Itera sobre cada item utilizando forEach
+  cart.forEach(([key, value]) => {
+    localStorage.removeItem(key, value);
+  });
 }

@@ -1,0 +1,63 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: rgb(0, 0, 0);
+  background: radial-gradient(circle,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.896796218487395) 50%,
+      rgba(0, 0, 0, 1) 100%);
+  color: #e5e5e5;
+}
+
+#container {
+  width: 100vw;
+  height: 80vh;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+#items {
+  width: 80vw;
+  height: 100%;
+}
+
+#price {
+  width: 20vw;
+  height: 80vh;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cart-item {
+  display: flex;
+  width: 60vw;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2vh 0;
+  padding: 0 10vw;
+  font-size: 1.8rem;
+}
+
+.item-cover {
+  max-height: 18vh;
+}
+
+.total-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

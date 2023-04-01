@@ -67,19 +67,6 @@ function movieDetail(idSerie, detailId, type) {
         movieTitle.innerHTML = name;
         moviePrice.innerHTML = `R$${price}`;
         movieSize.dataset.size = size;
-
-
-        // for (let i = 0; i < items.length; i++) {
-        //   const serieId = items[i].getAttribute('id')[0].textContent;
-
-        //   if (serieId == id) {
-        //     moviePoster.src = `https://image.tmdb.org/t/p/w220_and_h330_face${items[i].getAttribute('poster_path').textContent}`;
-        //     movieDescription.innerHTML = items[i].getAttribute('overview').textContent;
-        //     movieTitle.innerHTML = items[i].getAttribute('title').textContent;
-        //     moviePrice.innerHTML = `R$${items[i].getAttribute('price').textContent}`;
-        //     movieSize.dataset.size = items[i].getAttribute('size').textContent;
-        //   }
-        // }
       });
   }
 
@@ -103,7 +90,7 @@ function closeMovieDetail(detailId) {
 function addToCart(detailId) {
   const id = localStorage.getItem('detailed');
   localStorage.setItem(id, "onCart");
-  // alert(`Filme ${id} adicionado ao carrinho.`);
+  document.cookie = id+"=onCart";
   const btnAdd = document.querySelector(`#add${detailId}`);
   const btnRemove = document.querySelector(`#remove${detailId}`);
   const movie = document.getElementById(id);
@@ -117,7 +104,7 @@ function addToCart(detailId) {
 function removeFromCart(detailId) {
   const id = localStorage.getItem('detailed');
   localStorage.removeItem(id, "");
-  // alert(`Filme ${id} removido do carrinho.`);
+  document.cookie = id + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
   const btnAdd = document.querySelector(`#add${detailId}`);
   const btnRemove = document.querySelector(`#remove${detailId}`);
   const movie = document.getElementById(id);
