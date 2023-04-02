@@ -21,7 +21,7 @@ body {
 }
 body::-webkit-scrollbar {
   width: 5px;
-  height: 3px; /* A altura só é vista quando a rolagem é horizontal */
+  height: 3px;
 }
 
 body::-webkit-scrollbar-track {
@@ -49,24 +49,38 @@ body::-webkit-scrollbar-thumb {
 
 #price {
   width: 20vw;
-  height: 80vh;
   position: fixed;
   bottom: 0;
+  top: 18.3vh;
   right: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font: 1.3rem bold;
+  letter-spacing: 1.5px;
+}
+#price input {
+  margin: 5vh 0;
+  height: 7vh;
+  width: 13vw;
+  font-weight: bold;
+  border-radius: 3px;
+  outline: none;
+}
+#price input:hover {
+  transition: all 0.3s ease-in-out;
+  background-color: green;
 }
 
 .cart-item {
   display: flex;
-  width: 60vw;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin: 2vh 0;
   padding: 0 10vw;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 
 .item-cover {
@@ -74,6 +88,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .total-price {
+  padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;

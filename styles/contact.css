@@ -15,6 +15,8 @@ body {
   );
   color: #e5e5e5;
   overflow: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: black transparent;
 }
 main {
   margin: auto;
@@ -23,25 +25,48 @@ main {
   bottom: 0;
 }
 section {
+  margin: 10vh 0;
   display: flex;
   flex-direction: column;
-
   align-items: center;
   height: 80vh;
   width: 100vw;
 }
-table {
-  margin: 5vh;
-  width: 50vw;
-  height: 20vh;
-  text-align: center;
-  border-collapse: collapse;
+.integrantesRa {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
-
-.integrantesRa th,
-.integrantesRa td {
-  padding: 8px;
+.integrantesRa div {
+  position: relative;
+  padding: 4px;
+  width: 40vw;
+  height: 4vh;
+  margin: 20px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: height 1s ease-in-out;
 }
-.integrantesRa td {
-  text-align: justify;
+.integrantesRa div p {
+  padding: 2px;
+  font-size: 18px;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  transition: height 0.5s ease-in-out;
+}
+.integrantesRa div:hover {
+  padding: 5px;
+  height: auto;
+  -webkit-line-clamp: unset;
+  transition: height 1s ease-in-out;
+}
+.integrantesRa div p:hover {
+  -webkit-line-clamp: unset;
+  height: auto;
+  transition: height 1s ease-in-out;
 }

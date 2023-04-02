@@ -2,11 +2,6 @@
 if (isset($_GET['key']) && isset($_GET['value'])) {
   setcookie($_GET['key'], $_GET['value'], time() + 1800); // expira em 1 hora
 }
-// $firstName = $_POST['first-name'];
-// $birthDate = new DateTime($_POST['birth-date']);
-// $todayDate = new DateTime(date('y-m-d'));
-// $intervall = date_diff($birthDate, $todayDate);
-// $age = $intervall->format('%y anos');
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -53,7 +48,7 @@ if (isset($_GET['key']) && isset($_GET['value'])) {
     </section>
     <section id='price'>
       <div class="total-price">
-        Precço Total:
+        Preço total:
         <?php
         echo "R$" . number_format($total, 2, ',', '.');
         ?>
