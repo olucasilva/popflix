@@ -7,7 +7,7 @@
             <ul>
                 <li> <a class="navLink" href="../index.php">Filmes</a></li>
                 <li> <a class="navLink" href="../pages/series.php">Series</a></li>
-                <li> <a class="navLink" href="">Contato</a></li>
+                <li> <a class="navLink" href="../pages/contact.php">Contato</a></li>
             </ul>
         </div>    
     </nav>

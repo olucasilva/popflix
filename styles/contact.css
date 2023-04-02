@@ -1,0 +1,47 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background: rgb(0, 0, 0);
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.896796218487395) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  color: #e5e5e5;
+  overflow: hidden;
+}
+main {
+  margin: auto;
+  height: 80vh;
+  position: absolute;
+  bottom: 0;
+}
+section {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  height: 80vh;
+  width: 100vw;
+}
+table {
+  margin: 5vh;
+  width: 50vw;
+  height: 20vh;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+.integrantesRa th,
+.integrantesRa td {
+  padding: 8px;
+}
+.integrantesRa td {
+  text-align: justify;
+}

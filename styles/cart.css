@@ -8,11 +8,29 @@ body {
   width: 100vw;
   height: 100vh;
   background: rgb(0, 0, 0);
-  background: radial-gradient(circle,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 0.896796218487395) 50%,
-      rgba(0, 0, 0, 1) 100%);
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.896796218487395) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
   color: #e5e5e5;
+  overflow: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: black transparent;
+}
+body::-webkit-scrollbar {
+  width: 5px;
+  height: 3px; /* A altura só é vista quando a rolagem é horizontal */
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+  padding: 2px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #000;
 }
 
 #container {

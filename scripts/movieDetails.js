@@ -34,6 +34,8 @@ function movieDetail(idSerie, detailId, type) {
           movieTitle.innerHTML = movie.title;
           moviePrice.innerHTML = `R$${movie.price}`;
           movieSize.dataset.size = movie.size;
+          let sizeText = 'minutos';
+          movieSize.dataset.size = movie.size + " - " + sizeText;
         } else {
           console.log(`Objeto com ID ${id} não encontrado`);
         }
@@ -67,6 +69,8 @@ function movieDetail(idSerie, detailId, type) {
         movieTitle.innerHTML = name;
         moviePrice.innerHTML = `R$${price}`;
         movieSize.dataset.size = size;
+        let sizeText = 'temporadas';
+        movieSize.dataset.size = size;
       });
   }
 
@@ -90,7 +94,7 @@ function closeMovieDetail(detailId) {
 function addToCart(detailId) {
   const id = localStorage.getItem('detailed');
   localStorage.setItem(id, "onCart");
-  document.cookie = id+"=onCart";
+  document.cookie = id + "=onCart";
   const btnAdd = document.querySelector(`#add${detailId}`);
   const btnRemove = document.querySelector(`#remove${detailId}`);
   const movie = document.getElementById(id);
