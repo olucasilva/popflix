@@ -70,6 +70,7 @@ body::-webkit-scrollbar-thumb {
 #price input:hover {
   transition: all 0.3s ease-in-out;
   background-color: green;
+  cursor: pointer;
 }
 
 .cart-item {

@@ -5,25 +5,21 @@
     </h2>
     <div class="integrantesRa">
       <div>
-        <p>Kayke Bauer Santana Marins <br> RA: 4525435234</p>
-        
+        <p data-ra="RA: 123">Kayke Bauer Santana Marins</p>
       </div>
       <div>
-        <p>Lucas de Oliveira <br> RA: 4525435234</p>
+        <p data-ra="RA: 345">Lucas da Silva Oliveira</p>
       </div>
       <div>
-          <p>Marcos Paulo Moraes Frances <br> RA: 4525435234</p>
-          
-        </div>
-        <div>
-          <p>Paulo Augusto Lima Bernardi <br> RA: 4525435234</p>
-
-        </div>
-        <div>
-          <p>Thomas <br> RA: 4525435234</p>
-
-        </div>
+        <p data-ra="RA: 4525435234">Marcos Paulo Moraes Frances</p>
       </div>
+      <div>
+        <p data-ra="RA: 4525435234">Paulo Augusto Lima Bernardi</p>
+      </div>
+      <div>
+        <p data-ra="RA: 4525435234">Thomas Pavin Capello</p>
+      </div>
+    </div>
     </div>
   </section>
 </main>

@@ -34,39 +34,44 @@ section {
 }
 .integrantesRa {
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  margin: 5vh;
 }
 .integrantesRa div {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   padding: 4px;
   width: 40vw;
-  height: 4vh;
-  margin: 20px;
-  border: 1px solid rgb(255, 255, 255);
-  border-radius: 5px;
+  height: 2.4vh;
+  margin: 2px;
+  padding: 1vh;
+  background-color: #4e4e4e80;
+  /* border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px; */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: height 1s ease-in-out;
+  transition: height 0.2s ease-in-out;
 }
 .integrantesRa div p {
-  padding: 2px;
   font-size: 18px;
   font-weight: bold;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-  transition: height 0.5s ease-in-out;
 }
-.integrantesRa div:hover {
-  padding: 5px;
-  height: auto;
-  -webkit-line-clamp: unset;
-  transition: height 1s ease-in-out;
+.integrantesRa div p::after {
+  margin-top: 0.3vh;
+  font-size: 12px;
+  font-weight: bold;
+  display: none;
+  transition: 1.5s ease-in-out;
 }
-.integrantesRa div p:hover {
-  -webkit-line-clamp: unset;
-  height: auto;
-  transition: height 1s ease-in-out;
+.integrantesRa div:hover{
+  padding: 1vh;
+  height: 4.7vh;
+}
+.integrantesRa div:hover p::after{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  content: attr(data-ra);
 }
