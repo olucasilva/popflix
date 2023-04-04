@@ -25,7 +25,7 @@ if (isset($_GET['key']) && isset($_GET['value'])) {
 
   include '../components/header.php';
   $moviesData = file_get_contents('../data/movies.json');
-  $movies = json_decode($moviesData, true);
+  $movies = json_decode($moviesData);
 
   ?>
   <section id='container'>
@@ -35,14 +35,33 @@ if (isset($_GET['key']) && isset($_GET['value'])) {
 
       foreach ($movies as $array) {
         foreach ($_COOKIE as $key => $ids) {
-          if ($array['id'] == $key) {
-            $poster_path = $array['poster_path'];
-            $title = $array['title'];
-            $price = "R$" . number_format($array['price'], 2, ',', '.');
-            $total += $array['price'];
+          if ($array->id == $key) {
+            $poster_path = $array->poster_path;
+            $title = $array->title;
+            $price = "R$" . number_format($array->price, 2, ',', '.');
+            $total += $array->price;
             include '../components/cartItem.php';
           }
         }
+      }
+      $data = "../data/series.xml";
+      $items = simplexml_load_file($data)->series;
+      $items = $items->serie;
+      foreach ($items as $item) {
+        foreach ($_COOKIE as $key => $ids) {
+          if ($item->id == $key) {
+            $poster_path = $item->poster_path;
+            $title = $item->name;
+            $price = "R$" . number_format(floatval($item->price), 2, ',', '.');
+            $total += $item->price;
+            include '../components/cartItem.php';
+          }
+        }
+      }
+      if ($total == 0) {
+        echo "<div class='cart-item'>
+        <div class='item-img'>Nada por aqui...
+        </div>";
       }
       ?>
     </section>

@@ -9,6 +9,13 @@ foreach ($_COOKIE as $key => $value) {
   // Define uma data de validade passada para o cookie
   setcookie($key, '', time() - 3600, '/');
 }
-sleep(1);
-header('Location: http://localhost/');
 ?>
+<script >
+  const cart = Object.entries(localStorage);
+  let i = 0;
+  // Itera sobre cada item utilizando forEach
+  cart.forEach(([key, value]) => {
+    localStorage.removeItem(key, value);
+  });
+  window.location.href = "http://localhost/";
+</script>

@@ -10,6 +10,7 @@ header {
   align-content: center;
   align-items: center;
 }
+
 h1 {
   font-size: 4.5rem;
   color: #ff0000;
@@ -26,7 +27,7 @@ ul {
   align-items: center;
 }
 
-ul > li {
+ul>li {
   width: 100vw;
 }
 

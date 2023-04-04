@@ -70,7 +70,7 @@ function movieDetail(idSerie, detailId, type) {
         moviePrice.innerHTML = `R$${price}`;
         movieSize.dataset.size = size;
         let sizeText = 'temporadas';
-        movieSize.dataset.size = size;
+        movieSize.dataset.size = size+sizeText;
       });
   }
 
@@ -93,8 +93,10 @@ function closeMovieDetail(detailId) {
 }
 function addToCart(detailId) {
   const id = localStorage.getItem('detailed');
+
   localStorage.setItem(id, "onCart");
-  document.cookie = id + "=onCart";
+  document.cookie = id + "=onCart;path=/";
+
   const btnAdd = document.querySelector(`#add${detailId}`);
   const btnRemove = document.querySelector(`#remove${detailId}`);
   const movie = document.getElementById(id);
@@ -102,13 +104,16 @@ function addToCart(detailId) {
   movie.classList.add('oncart');
   btnAdd.classList.add('hide');
   btnRemove.classList.remove('hide');
+
   closeMovieDetail(detailId);
   cartUpdate();
 }
 function removeFromCart(detailId) {
   const id = localStorage.getItem('detailed');
+
   localStorage.removeItem(id, "");
   document.cookie = id + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+
   const btnAdd = document.querySelector(`#add${detailId}`);
   const btnRemove = document.querySelector(`#remove${detailId}`);
   const movie = document.getElementById(id);
@@ -118,5 +123,6 @@ function removeFromCart(detailId) {
   btnAdd.classList.remove('hide');
   btnRemove.classList.add('hide');
 
+  closeMovieDetail(detailId);
   cartUpdate();
 } 

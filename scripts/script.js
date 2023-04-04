@@ -14,7 +14,7 @@ function cartUpdate() {
     document.querySelector('#cart').dataset.count = "9+";
   }
 }
-function clearCart(){
+function clearCart() {
   const cart = Object.entries(localStorage);
   let i = 0;
   // Itera sobre cada item utilizando forEach

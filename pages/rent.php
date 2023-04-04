@@ -15,7 +15,7 @@
   <title>PopFlix - Carrinho</title>
 </head>
 
-<body onload="clearCart()">
+<body>
   <section>
     <form action="../server/rent.php" method="post" enctype="multipart/form-data">
       <legend>Cadastro de Aluguel</legend>
