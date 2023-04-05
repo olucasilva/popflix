@@ -1,6 +1,6 @@
 <header>
     <div>
-        <h1>PobreFlix</h1>
+        <h1>PopFlix</h1>
     </div>
     <nav>
         <div>

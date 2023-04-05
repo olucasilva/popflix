@@ -8,7 +8,7 @@
   <title>PopFlix - Filmes</title>
   <link rel="stylesheet" href="../styles/style.css" />
   <link rel="stylesheet" href="../styles/header.css">
-  <script src="../scripts/script.js"></script>
+  <script src="../scripts/cart.js"></script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

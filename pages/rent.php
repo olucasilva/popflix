@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
   <script type="text/javascript" src="../scripts/script_cadastro.js"></script>
-  <script src="../scripts/script.js"></script>
+  <script src="../scripts/cart.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <title>PopFlix - Carrinho</title>
 </head>

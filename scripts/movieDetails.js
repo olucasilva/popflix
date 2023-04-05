@@ -33,9 +33,8 @@ function movieDetail(idSerie, detailId, type) {
           movieDescription.innerHTML = movie.overview;
           movieTitle.innerHTML = movie.title;
           moviePrice.innerHTML = `R$${movie.price}`;
-          movieSize.dataset.size = movie.size;
           let sizeText = 'minutos';
-          movieSize.dataset.size = movie.size + " - " + sizeText;
+          movieSize.dataset.size = movie.size + " " + sizeText;
         } else {
           console.log(`Objeto com ID ${id} não encontrado`);
         }
@@ -68,9 +67,8 @@ function movieDetail(idSerie, detailId, type) {
         movieDescription.innerHTML = overview;
         movieTitle.innerHTML = name;
         moviePrice.innerHTML = `R$${price}`;
-        movieSize.dataset.size = size;
         let sizeText = 'temporadas';
-        movieSize.dataset.size = size+sizeText;
+        movieSize.dataset.size = size+" "+sizeText;
       });
   }
 
@@ -91,38 +89,3 @@ function closeMovieDetail(detailId) {
     element.classList.remove('show');
   });
 }
-function addToCart(detailId) {
-  const id = localStorage.getItem('detailed');
-
-  localStorage.setItem(id, "onCart");
-  document.cookie = id + "=onCart;path=/";
-
-  const btnAdd = document.querySelector(`#add${detailId}`);
-  const btnRemove = document.querySelector(`#remove${detailId}`);
-  const movie = document.getElementById(id);
-
-  movie.classList.add('oncart');
-  btnAdd.classList.add('hide');
-  btnRemove.classList.remove('hide');
-
-  closeMovieDetail(detailId);
-  cartUpdate();
-}
-function removeFromCart(detailId) {
-  const id = localStorage.getItem('detailed');
-
-  localStorage.removeItem(id, "");
-  document.cookie = id + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-
-  const btnAdd = document.querySelector(`#add${detailId}`);
-  const btnRemove = document.querySelector(`#remove${detailId}`);
-  const movie = document.getElementById(id);
-
-  movie.classList.remove('oncart');
-
-  btnAdd.classList.remove('hide');
-  btnRemove.classList.add('hide');
-
-  closeMovieDetail(detailId);
-  cartUpdate();
-} 

@@ -19,7 +19,7 @@
       <button class="add" id="add<?php echo $detailId ?>" onclick="addToCart(<?php echo $detailId ?>)">Adicionar ao
         Carrinho</button>
       <button class="remove" id="remove<?php echo $detailId ?>"
-        onclick="removeFromCart(<?php echo $detailId ?>)">Remover do Carrinho</button>
+        onclick="removeFromCart(<?php echo $detailId ?>,null)">Remover do Carrinho</button>
     </div>
     <div id="isRented"></div>
   </div>

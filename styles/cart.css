@@ -47,6 +47,17 @@ body::-webkit-scrollbar-thumb {
   height: 100%;
 }
 
+.title{
+  width: 30vw;
+  display: flex;
+  justify-content: center;
+}
+.price{
+  width: 20vw;
+  display: flex;
+  justify-content: center;
+}
+
 #price {
   width: 20vw;
   position: fixed;
@@ -73,6 +84,19 @@ body::-webkit-scrollbar-thumb {
   cursor: pointer;
 }
 
+#price input:disabled{
+  margin: 5vh 0;
+  height: 7vh;
+  width: 13vw;
+  font-weight: bold;
+  border-radius: 3px;
+  outline: none;
+}
+#price input:disabled:hover{
+  background-color: rgba(239, 239, 239, 0.3);
+  cursor:not-allowed;
+}
+
 .cart-item {
   display: flex;
   flex-direction: row;
@@ -94,4 +118,9 @@ body::-webkit-scrollbar-thumb {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+#remove:hover{
+  cursor: pointer;
+  color: #ff0000;
 }
