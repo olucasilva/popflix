@@ -25,7 +25,7 @@
       <div class="div-input">
         <label for="first-name">Nome </label>
         <br />
-        <input type="text" name="first-name" placeholder="Digite seu nome" required />
+        <input type="text" name="firstname" placeholder="Digite seu nome" required />
       </div>
       <br />
       <div class="div-input">
