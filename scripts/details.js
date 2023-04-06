@@ -22,6 +22,7 @@ function movieDetail(idSerie, detailId, type) {
   const movieTitle = document.querySelector(`#movieTitle${detailId}`);
   const moviePrice = document.querySelector(`#moviePrice${detailId}`);
   const movieSize = document.querySelector(`#ts${detailId}`);
+  
   if (type == 0) {
     fetch('../data/movies.json')
       .then(response => response.json())
@@ -68,7 +69,7 @@ function movieDetail(idSerie, detailId, type) {
         movieTitle.innerHTML = name;
         moviePrice.innerHTML = `R$${price}`;
         let sizeText = 'temporadas';
-        movieSize.dataset.size = size+" "+sizeText;
+        movieSize.dataset.size = size + " " + sizeText;
       });
   }
 

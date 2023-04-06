@@ -1,29 +1,10 @@
-* {
-  margin: 0px;
-  padding: 0px;
-  font-family: 'Poppins', sans-serif;
-}
-body {
-  width: 100vw;
-  height: 100vh;
-  background: rgb(0, 0, 0);
-  background: radial-gradient(
-    circle,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 0.896796218487395) 50%,
-    rgba(0, 0, 0, 1) 100%
-  );
-  color: #e5e5e5;
-  overflow: hidden;
-  scrollbar-width: thin;
-  scrollbar-color: black transparent;
-}
 main {
   margin: auto;
   height: 80vh;
   position: absolute;
   bottom: 0;
 }
+
 section {
   margin: 10vh 0;
   display: flex;
@@ -32,11 +13,13 @@ section {
   height: 80vh;
   width: 100vw;
 }
+
 .integrantesRa {
   display: flex;
   flex-direction: column;
   margin: 5vh;
 }
+
 .integrantesRa div {
   display: flex;
   flex-direction: column;
@@ -44,19 +27,24 @@ section {
   justify-content: flex-start;
   padding: 4px;
   width: 40vw;
-  height: 2.4vh;
+  height: 5.4vh;
   margin: 2px;
   padding: 1vh;
   background-color: #4e4e4e80;
-  /* border: 1px solid rgb(255, 255, 255);
-  border-radius: 5px; */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: height 0.2s ease-in-out;
 }
+
+.integrantesRa div:hover {
+  padding: 1vh;
+  height: 6.8vh;
+}
+
 .integrantesRa div p {
   font-size: 18px;
   font-weight: bold;
 }
+
 .integrantesRa div p::after {
   margin-top: 0.3vh;
   font-size: 12px;
@@ -64,11 +52,8 @@ section {
   display: none;
   transition: 1.5s ease-in-out;
 }
-.integrantesRa div:hover{
-  padding: 1vh;
-  height: 4.7vh;
-}
-.integrantesRa div:hover p::after{
+
+.integrantesRa div:hover p::after {
   display: flex;
   flex-direction: row;
   align-items: center;

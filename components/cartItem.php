@@ -1,6 +1,6 @@
 <div class='cart-item'>
     <div class='item-img'>
-        <img class='item-cover' src='https://image.tmdb.org/t/p/w220_and_h330_face/<?php echo $poster_path ?>' alt="">
+        <img class='item-cover' src='https://image.tmdb.org/t/p/w220_and_h330_face/<?php echo $poster_path ?>'>
     </div>
     <div class='title'>
         <?php echo $title ?>

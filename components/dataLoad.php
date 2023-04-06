@@ -1,4 +1,6 @@
-<script src="../scripts/movieDetails.js"></script>
+<script src="../scripts/details.js"></script>
+<link rel="stylesheet" href="../styles/details.css" />
+<link rel="stylesheet" href="../styles/dataLoad.css" />
 <section id="container">
   <?php
   $i = 0;
@@ -19,14 +21,14 @@
     $i++;
     if ($i == 5) {
       echo "</div>";
-      include 'movieDetails.php';
+      include 'details.php';
       $i = 0;
       $detailId++;
     }
   }
   if ($i != 0) {
     echo "</div>";
-    include 'movieDetails.php';
+    include 'details.php';
   }
   ?>
   <script>

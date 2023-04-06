@@ -1,8 +1,3 @@
-<?php
-if (isset($_GET['key']) && isset($_GET['value'])) {
-  setcookie($_GET['key'], $_GET['value'], time() + 1800); // expira em 1 hora
-}
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -10,18 +5,25 @@ if (isset($_GET['key']) && isset($_GET['value'])) {
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <link rel="stylesheet" href="../styles/cart.css" />
+  <link rel="stylesheet" href="../styles/style.css" />
   <link rel="stylesheet" href="../styles/header.css" />
-  <script src="../scripts/cart.js"></script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
-  <title>Filmes Alugados - Pobreflix</title>
+
+  <script src="../scripts/cart.js"></script>
+
+  <title>PopFlix - Carrinho</title>
 </head>
 
 <body onload="cartUpdate()">
-
   <?php
+  if (isset($_GET['key']) && isset($_GET['value'])) {
+    setcookie($_GET['key'], $_GET['value'], time() + 1800); // expira em 1 hora
+  }
 
   include '../components/header.php';
   $data = file_get_contents('../data/movies.json');
@@ -60,23 +62,25 @@ if (isset($_GET['key']) && isset($_GET['value'])) {
           }
         }
       }
-      $atribute=null;
+      $atribute = null;
       if ($total == 0) {
         echo "<div class='cart-item'>
         <div class='item-img'>Nada por aqui...
         </div>";
-        $atribute='disabled';
+        $atribute = 'disabled';
       }
       ?>
     </section>
     <section id='price'>
       <div class="total-price">
-        Preço total:
+        <label for="price">
+          Preço total:
+        </label>
         <?php
         echo "R$" . number_format($total, 2, ',', '.');
         ?>
-        <form action="../pages/rent.php">
-          <input type='submit' value='Alugar' <?php echo $atribute?>>
+        <form action="../pages/rentForm.php">
+          <input type='submit' value='Alugar' <?php echo $atribute ?>>
           </input>
         </form>
       </div>

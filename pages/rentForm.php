@@ -5,20 +5,23 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../styles/style_cadastro.css" />
+
+  <link rel="stylesheet" href="../styles/form.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
-  <script type="text/javascript" src="../scripts/script_cadastro.js"></script>
+
+  <script src="../scripts/form.js"></script>
   <script src="../scripts/cart.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <title>PopFlix - Carrinho</title>
+
+  <title>PopFlix - Formulário</title>
 </head>
 
 <body>
   <section>
     <form action="../server/rent.php" method="post" enctype="multipart/form-data">
-      <legend>Cadastro de Aluguel</legend>
+      <legend>Formulário de Aluguel</legend>
       <div class="div-input">
         <label for="first-name">Nome </label>
         <br />
@@ -49,7 +52,6 @@
         <input type="date" name="birth-date" required />
       </div>
       <br />
-
       <br />
       <hr />
       <br />

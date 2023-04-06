@@ -15,11 +15,15 @@
     <div class="movie-description">
       <p id="movieDescription<?php echo $detailId ?>"></p>
     </div>
-    <div id="button">
-      <button class="add" id="add<?php echo $detailId ?>" onclick="addToCart(<?php echo $detailId ?>)">Adicionar ao
-        Carrinho</button>
-      <button class="remove" id="remove<?php echo $detailId ?>"
-        onclick="removeFromCart(<?php echo $detailId ?>,null)">Remover do Carrinho</button>
+    <div class="button">
+      <a href="#row<?php echo $detailId ?>" style="text-decoration: none">
+        <button class="add" id="add<?php echo $detailId ?>" onclick="addToCart(<?php echo $detailId ?>)">Adicionar ao
+          Carrinho</button>
+      </a>
+      <a href="#row<?php echo $detailId ?>" style="text-decoration: none">
+        <button class="remove" id="remove<?php echo $detailId ?>"
+          onclick="removeFromCart(<?php echo $detailId ?>,null)">Remover do Carrinho</button>
+      </a>
     </div>
     <div id="isRented"></div>
   </div>

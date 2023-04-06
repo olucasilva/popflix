@@ -1,0 +1,131 @@
+.hide,
+.movie-details {
+  display: none;
+}
+
+.show:target {
+  scroll-margin-top: 30vh;
+}
+
+.show {
+  width: 100vw;
+  height: 55vh;
+  background: rgb(47, 47, 47);
+  background: linear-gradient(90deg,
+      rgba(47, 47, 47, 1) 0%,
+      rgba(62, 62, 62, 0.8185399159663865) 50%,
+      rgba(47, 47, 47, 1) 100%);
+  display: flex;
+  flex-direction: row;
+  margin: 3.1vh 0;
+}
+
+.arrow-box {
+  width: 3vw;
+  height: 3vw;
+  display: flex;
+  align-items: center;
+  margin: 1vw;
+  transform: translateY(-30%);
+}
+
+.left-arrow {
+  color: #fff;
+  font-size: 35px;
+  transition: all 0.3s ease;
+  margin: 1vw;
+}
+
+.left-arrow:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.detail-cover {
+  max-width: 100%;
+  max-height: 100%;
+  border: transparent;
+  border-radius: 4px;
+  position: relative;
+  margin: 1vw;
+}
+
+.info {
+  margin: 1vw;
+  height: 55vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.movie-title {
+  color: #fff;
+  font-size: 3em;
+  display: inline-table;
+}
+
+.movie-title::after {
+  content: attr(data-size);
+  color: #fff;
+  font-size: 0.4em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.movie-price {
+  height: 5%;
+  color: #fff;
+  font-size: 2em;
+  display: inline-table;
+}
+
+.movie-description {
+  overflow: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: black transparent;
+}
+
+.movie-description::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+  /* A altura só é vista quando a rolagem é horizontal */
+}
+
+.movie-description::-webkit-scrollbar-track {
+  background: transparent;
+  padding: 2px;
+}
+
+.movie-description::-webkit-scrollbar-thumb {
+  background-color: #000;
+}
+
+#button {
+  height: 30%;
+}
+
+.add,
+.remove {
+  margin: 20px 2px;
+  padding: 10px;
+  border-radius: 3.5px;
+  font-size: 16px;
+}
+
+.remove:hover {
+  background-color: #ff0000;
+  color: white;
+  transition: 0.5s all ease;
+  outline: none;
+  cursor: pointer;
+}
+
+.add:hover {
+  background-color: #4a4a4a;
+  color: white;
+  transition: 0.5s all ease;
+  outline: none;
+  cursor: pointer;
+}
