@@ -13,13 +13,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
 
+  <script src="../scripts/cart.js"></script>
+
   <title>PopFlix - Filmes</title>
 </head>
+
 <body>
-  <div class='finaly'> 
-    <label>Compra efetuada com sucesso!</label>
+  <div class='finaly'>
+    <label>Compra efetuada com sucesso! Baixe a nota fiscal clicando <a href="../components/download.php?file=<? echo $file?>">aqui</a></label>
     <br>
-    <button id="finaly">ok</button>
-    <button id="download" >Baixar nota fiscal</button>
+    <button id="finaly" onclick="clearCart()">Voltar ao início</button>
   </div>
 </body>

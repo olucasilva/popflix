@@ -13,6 +13,9 @@ function cartUpdate() {
 
     document.querySelector('#cart').dataset.count = "9+";
   }
+  if (document.cookie.length==0 && moviesOnCart.length!=0) {
+    clearCart();
+  }
 }
 function clearCart() {
   const cart = Object.entries(localStorage);
