@@ -1,10 +1,25 @@
 <?php
 date_default_timezone_set('America/Sao_Paulo');
+
 $dataFilmes = file_get_contents('../data/movies.json');
 $itemsFilmes = json_decode($dataFilmes);
 
 $dataSeries = simplexml_load_file('../data/series.xml')->series;
 
+function download()
+{
+  $dir = '../notaFiscal/';
+  $files = scandir($dir);
+  rsort($files);
+  $last_file = reset($files);
+  $file_path = $dir . $last_file;
+  if (is_readable($file_path)) {
+    header('Content-Type: application/octet-stream');
+    header('Content-Length: ' . filesize($file_path));
+    header('Content-Disposition: attachment; filename="' . basename($file_path) . '"');
+    readfile($file_path);
+  }
+}
 
 function gravar($email, $personName, $titles, $totalF, $id, $idsSeries, $titlesSeries, $totalS, $totalT)
 {
@@ -17,7 +32,7 @@ function gravar($email, $personName, $titles, $totalF, $id, $idsSeries, $titlesS
   $totalS = "R$" . number_format($totalS, 2, ',', '.');
   $totalF = "R$" . number_format($totalF, 2, ',', '.');
   $timestamp = date("d-m-Y_H_i_s");
-  $arquivo = "./notaFiscal_$timestamp.txt";
+  $arquivo = "../notaFiscal/notaFiscal_$timestamp.txt";
   $fp = fopen($arquivo, 'a+');
   fwrite($fp, "Nome: " . $personName);
   fwrite($fp, "\n");
@@ -47,9 +62,7 @@ function gravar($email, $personName, $titles, $totalF, $id, $idsSeries, $titlesS
   fwrite($fp, "\n");
   fwrite($fp, "Valor pago: " . $totalT);
   fclose($fp);
-
 }
-
 function getItems($itemsFilmes, $dataSeries)
 {
   if (isset($_POST['firstname'], $_POST['email'])) {
@@ -88,27 +101,42 @@ function getItems($itemsFilmes, $dataSeries)
 
   gravar($email, $personName, $titles, $totalF, $id, $idsSeries, $titlesSeries, $totalS, $totalT);
 }
-getItems($itemsFilmes, $dataSeries);
 
-
-
-// Incluir rotina para:
-//   Gravar em arquivo texto: 
-//     -Dados do cliente
-//     -Data completa com o nome da cidade
-//     -Ids dos selecionados 
-//     -Valor total
 foreach ($_COOKIE as $key => $value) {
   // Define uma data de validade passada para o cookie
   setcookie($key, '', time() - 3600, '/');
 }
+include '../components/finaly.php';
 ?>
 <script >
-  const cart = Object.entries(localStorage);
-  let i = 0;
-  // Itera sobre cada item utilizando forEach
-  cart.forEach(([key, value]) => {
-    localStorage.removeItem(key, value);
-  });
-  window.location.href = "http://localhost/";
+  const btnFinaly = document.queryselector('#finaly')
+  btnFinaly.addEventListener('click',finaly)
+  const btnDownload = document.queryselector('#download')
+  btnDownload.addEventListener('click',download)
+  function finaly(){
+    <?php
+    getItems($itemsFilmes, $dataSeries)
+      ?>
+    const cart = Object.entries(localStorage);
+    let i = 0;
+    // Itera sobre cada item utilizando forEach
+    cart.forEach(([key, value]) => {
+      localStorage.removeItem(key, value);
+    });
+    window.location.href = "http://localhost/";        
+  }
+  function download(){
+    <?php
+    getItems($itemsFilmes, $dataSeries);
+    download();
+    ?>
+    const cart = Object.entries(localStorage);
+    let i = 0;
+    // Itera sobre cada item utilizando forEach
+    cart.forEach(([key, value]) => {
+      localStorage.removeItem(key, value);
+    });
+    window.location.href = "http://localhost/";   
+  }  
 </script>
+
