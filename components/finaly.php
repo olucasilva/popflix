@@ -4,6 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link rel="stylesheet" href="../styles/finaly.css" />
+  <link rel="stylesheet" href="../styles/style.css" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +21,7 @@
 
 <body>
   <div class='finaly'>
-    <label>Compra efetuada com sucesso! Baixe a nota fiscal clicando <a href="../components/download.php?file=<? echo $file?>">aqui</a></label>
+    <label><center>Compra efetuada com sucesso! Baixe a nota fiscal clicando <a href="../components/download.php?file=<? echo $file?>">aqui</a></center></label>
     <br>
     <button id="finaly" onclick="clearCart()">Voltar ao início</button>
   </div>

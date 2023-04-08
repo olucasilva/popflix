@@ -31,7 +31,7 @@
 
 .left-arrow {
   color: #fff;
-  font-size: 35px;
+  font-size: 2.2em;
   transition: all 0.3s ease;
   margin: 1vw;
 }
@@ -88,14 +88,14 @@
 }
 
 .movie-description::-webkit-scrollbar {
-  width: 3px;
-  height: 3px;
+  width: 0.2em;
+  height: 0.2em;
   /* A altura só é vista quando a rolagem é horizontal */
 }
 
 .movie-description::-webkit-scrollbar-track {
   background: transparent;
-  padding: 2px;
+  padding: 0.125em;
 }
 
 .movie-description::-webkit-scrollbar-thumb {
@@ -108,10 +108,10 @@
 
 .add,
 .remove {
-  margin: 20px 2px;
-  padding: 10px;
-  border-radius: 3.5px;
-  font-size: 16px;
+  margin: 1.25em 0.125em;
+  padding: 0.625em;
+  border-radius: 0.219em;
+  font-size: 1em;
 }
 
 .remove:hover {

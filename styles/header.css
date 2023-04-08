@@ -12,7 +12,7 @@ header {
 }
 
 h1 {
-  font-size: 4.5rem;
+  font-size: 4.5em;
   color: #ff0000;
 }
 
@@ -29,12 +29,14 @@ ul {
 
 ul>li {
   width: 100vw;
+  display: flex;
+  justify-content: center;
+  font-size: 1em;
 }
 
 .navLink {
   text-decoration: none;
   color: #fff;
-  font-size: 20px;
 }
 
 .navLink:hover {
@@ -54,17 +56,20 @@ ul>li {
 .cart::before {
   content: attr(data-count);
   background-color: red;
-  font-size: 12px;
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 1.7em;
-  min-height: 1.7em;
-  max-width: 1.7em;
-  max-height: 1.7em;
+  min-width: 1.5em;
+  min-height: 1.5em;
+  max-width: 1.5em;
+  max-height: 1.5em;
+  font-size: 0.8em;
   position: sticky;
   border-radius: 50%;
   top: 100%;
   left: 100%;
+}
+.cart img{
+  width: 1.5vw;
 }

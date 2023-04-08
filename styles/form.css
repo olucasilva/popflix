@@ -16,7 +16,7 @@ section {
   background-size: cover;
   min-height: 100vh;
   position: relative;
-  font-size: 0.8rem;
+  font-size: 0.8em;
 }
 
 @media (min-height: 800px) {
@@ -28,7 +28,7 @@ section {
 }
 
 legend {
-  font: 600 3rem 'Poppins', sans-serif;
+  font: 600 3em 'Poppins', sans-serif;
   padding: 0 0 3vh 0;
   text-align: center;
   margin: 0 0 3vh 0;
@@ -50,7 +50,7 @@ form {
   display: flex;
 }
 label {
-  font: 600 1.2rem 'Poppins', sans-serif;
+  font: 600 1.2em 'Poppins', sans-serif;
 }
 
 input {
@@ -67,7 +67,7 @@ input {
 }
 
 input:hover {
-  border: 1px solid #000000d6;
+  border: 0.07em solid #000000d6;
 }
 
 button {
@@ -79,14 +79,14 @@ button {
   margin: 0 auto;
   padding: 0.8vh 0.4vw;
   text-align: center;
-  font: 600 1.5rem 'Poppins', sans-serif;
+  font: 600 1.5em 'Poppins', sans-serif;
   color: #fff;
   border: 0px solid transparent;
 }
 
 button:hover {
   cursor: pointer;
-  border: 1px solid #000;
+  border: 0.07em solid #000;
   background: #1c1c1c;
 }
 
@@ -95,8 +95,8 @@ hr {
 }
 
 .is-invalid {
-  border: 2px solid red;
+  border: .125em solid red;
 }
 .is-valid {
-  border: 2px solid green;
+  border: .125em solid green;
 }

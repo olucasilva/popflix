@@ -31,7 +31,7 @@ section {
   margin: 2vh;
   padding: 2vh;
   background-color: #4e4e4e80;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.125em 0.31em rgba(0, 0, 0, 0.1);
   transition: height 0.2s ease-in-out;
 }
 
@@ -41,13 +41,13 @@ section {
 }
 
 .integrantesRa div p {
-  font-size: 18px;
+  font-size: 1.125em;
   font-weight: bold;
 }
 
 .integrantesRa div p::after {
   margin-top: 0.3vh;
-  font-size: 12px;
+  font-size: 0.75em;
   font-weight: bold;
   display: none;
   transition: 1.5s ease-in-out;

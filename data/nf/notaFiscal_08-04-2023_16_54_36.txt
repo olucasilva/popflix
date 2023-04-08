@@ -1,0 +1,16 @@
+Nome: Lucas
+Email: lucas-up19@hotmail.com
+Cidade: Lorena
+Data: 08-04-2023 16:54:36
+------------------------------------
+Filmes alugados: 
+	 - A Lista de Schindler
+ID dos filmes alugados: 
+	 - 424
+Valor pago nos filmes: R$22,22
+------------------------------------
+Series alugadas: 
+ID das series alugadas: 
+Valor pago nas series: R$0,00
+------------------------------------
+Valor total: R$22,22

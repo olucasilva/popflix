@@ -1,11 +1,11 @@
 body::-webkit-scrollbar {
-  width: 5px;
-  height: 3px;
+  width: 0.31em;
+  height: 0.2em;
 }
 
 body::-webkit-scrollbar-track {
   background: transparent;
-  padding: 2px;
+  padding: 0.125em;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -40,7 +40,7 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   margin: 2vh 0;
   padding: 0 10vw;
-  font-size: 1.3rem;
+  font-size: 1.3em;
   font-weight: bold;
 }
 
@@ -55,7 +55,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .total-price {
-  padding: 10px;
+  padding: 0.625em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -88,17 +88,17 @@ body::-webkit-scrollbar-thumb {
   right: 0;
   display: flex;
   flex-direction: column;
-  font: 1.3rem bold;
-  letter-spacing: 1.5px;
+  font: 1.3em bold;
+  letter-spacing: 0.1em;
   justify-content: flex-start;
 }
 
 #price input {
-  margin: 5vh 0;
+  margin: 1vh 0;
   height: 7vh;
   width: 13vw;
-  font-weight: bold;
-  border-radius: 3px;
+  font-size: 1em;
+  border-radius: 0.2em;
   outline: none;
 }
 
@@ -113,7 +113,7 @@ body::-webkit-scrollbar-thumb {
   height: 7vh;
   width: 13vw;
   font-weight: bold;
-  border-radius: 3px;
+  border-radius: 0.2em;
   outline: none;
 }
 

@@ -19,19 +19,44 @@ body {
   overflow: scroll;
   scrollbar-width: thin;
   scrollbar-color: black transparent;
+  font-size: 16px;
+}
+
+/* Ajustar o tamanho da fonte para telas maiores que 1920px (resolução Full HD) */
+@media (min-width: 1920px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+/* Ajustar o tamanho da fonte para telas maiores que 2560px (resolução 2,5k) */
+@media (min-width: 2560px) {
+  body {
+    font-size: 24px;
+  }
+}
+
+/* Ajustar o tamanho da fonte para telas maiores que 3840px (resolução 4k) */
+@media (min-width: 3840px) {
+  body {
+    font-size: 40px;
+  }
 }
 
 body::-webkit-scrollbar {
-  width: 5px;
-  height: 3px;
+  width: 0.31em;
+  height: 0.19em;
   /* A altura só é vista quando a rolagem é horizontal */
 }
 
 body::-webkit-scrollbar-track {
   background: transparent;
-  padding: 2px;
+  padding: 1.125em;
 }
 
 body::-webkit-scrollbar-thumb {
   background-color: #000;
+}
+input {
+  font-size: 1em;
 }
