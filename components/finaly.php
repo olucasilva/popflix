@@ -21,7 +21,7 @@
 
 <body>
   <div class='finaly'>
-    <label><center>Compra efetuada com sucesso! Baixe a nota fiscal clicando <a href="../components/download.php?file=<? echo $file?>">aqui</a></center></label>
+    <label><center>Compra efetuada com sucesso! Baixe a nota fiscal clicando <a href="../components/download.php?file=<?php echo $file ?>">aqui</a></center></label>
     <br>
     <button id="finaly" onclick="clearCart()">Voltar ao início</button>
   </div>
