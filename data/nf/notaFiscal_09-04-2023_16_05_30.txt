@@ -1,0 +1,6 @@
+Nome: Lucas
+Email: 123@123.123
+Cidade: Lorena
+Data: 09-04-2023 16:05:30
+------------------------------------
+Valor total: R$22,22

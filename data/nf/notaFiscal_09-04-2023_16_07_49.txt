@@ -1,0 +1,24 @@
+Nome: Lucas
+Email: lucas-up19@hotmail.com
+Cidade: Lorena
+Data: 09-04-2023 16:07:49
+------------------------------------
+Filmes alugados: 
+	 - Um Sonho de Liberdade
+	 - Parasita
+	 - Psicose
+ID dos filmes alugados: 
+	 - 278
+	 - 496243
+	 - 539
+Valor pago nos filmes: R$66,66
+------------------------------------
+Series alugadas: 
+	 - The Last of Us
+	 - Avatar: A Lenda de Aang
+ID das series alugadas: 
+	 - 100088
+	 - 246
+Valor pago nas series: R$45,10
+------------------------------------
+Valor total: R$111,76

@@ -1,12 +1,12 @@
-Nome: Lucas
-Email: lucas-up19@hotmail.com
+Nome: 1
+Email: 123@123.123
 Cidade: Lorena
-Data: 08-04-2023 16:54:36
+Data: 09-04-2023 15:58:57
 ------------------------------------
 Filmes alugados: 
-	 - A Lista de Schindler
+	 - Um Sonho de Liberdade
 ID dos filmes alugados: 
-	 - 424
+	 - 278
 Valor pago nos filmes: R$22,22
 ------------------------------------
 Series alugadas: 

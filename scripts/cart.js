@@ -24,7 +24,6 @@ function clearCart() {
   cart.forEach(([key, value]) => {
     localStorage.removeItem(key, value);
   });
-  window.location.href = "http://localhost/";
 }
 function addToCart(detailId) {
   const id = localStorage.getItem('detailed');

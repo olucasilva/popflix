@@ -44,11 +44,13 @@ form {
   margin: 0 auto;
   min-width: 100%;
 }
+
 .div-file {
   margin: 0 auto;
   min-width: 100%;
   display: flex;
 }
+
 label {
   font: 600 1.2em 'Poppins', sans-serif;
 }
@@ -90,6 +92,24 @@ button:hover {
   background: #1c1c1c;
 }
 
+button:disabled {
+  overflow: hidden;
+  min-width: 15vw;
+  height: 8vh;
+  display: block;
+  margin: 0 auto;
+  padding: 0.8vh 0.4vw;
+  text-align: center;
+  font: 600 1.5em 'Poppins', sans-serif;
+  color: #fff;
+  border: 0px solid transparent;
+}
+
+button:disabled:hover {
+  background-color: rgba(239, 239, 239);
+  cursor: not-allowed;
+}
+
 hr {
   width: 100%;
 }
@@ -97,6 +117,10 @@ hr {
 .is-invalid {
   border: .125em solid red;
 }
+
 .is-valid {
   border: .125em solid green;
+}
+.is-invalid::placeholder {
+  color: red;
 }

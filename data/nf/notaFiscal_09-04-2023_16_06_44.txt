@@ -1,0 +1,12 @@
+Nome: Lucas
+Email: lucas-up19@hotmail.com
+Cidade: Lorena
+Data: 09-04-2023 16:06:44
+------------------------------------
+Series alugadas: 
+	 - Arcane
+ID das series alugadas: 
+	 - 94605
+Valor pago nas series: R$22,55
+------------------------------------
+Valor total: R$22,55

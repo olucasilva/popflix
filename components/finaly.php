@@ -19,10 +19,15 @@
   <title>PopFlix - Filmes</title>
 </head>
 
-<body>
+<body onload="clearCart()">
   <div class='finaly'>
-    <label><center>Compra efetuada com sucesso! Baixe a nota fiscal clicando <a href="../components/download.php?file=<?php echo $file ?>">aqui</a></center></label>
+    <label>
+      <center>Compra efetuada com sucesso! Baixe a nota fiscal clicando <a
+          href="../components/download.php?file=<?php echo $file ?>">aqui</a></center>
+    </label>
     <br>
-    <button id="finaly" onclick="clearCart()">Voltar ao início</button>
+    <form action="../">
+      <button id="finaly" onclick="submit()">Voltar ao início</button>
+    </form>
   </div>
 </body>

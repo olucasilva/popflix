@@ -1,16 +1,12 @@
 Nome: Lucas
 Email: lucas-up19@hotmail.com
 Cidade: Lorena
-Data: 08-04-2023 15:16:38
+Data: 09-04-2023 16:06:27
 ------------------------------------
 Filmes alugados: 
 	 - O Poderoso Chefão: Parte II
 ID dos filmes alugados: 
 	 - 240
 Valor pago nos filmes: R$22,22
-------------------------------------
-Series alugadas: 
-ID das series alugadas: 
-Valor pago nas series: R$0,00
 ------------------------------------
 Valor total: R$22,22

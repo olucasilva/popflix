@@ -55,9 +55,6 @@ if ($i != 0) {
     echo $e;
   }
   $cidade = isset($data['city']) ? $data['city'] : 'Não identificado';
-  $totalT = "R$" . number_format($totalT, 2, ',', '.');
-  $totalS = "R$" . number_format($totalS, 2, ',', '.');
-  $totalF = "R$" . number_format($totalF, 2, ',', '.');
   $timestamp = date("d-m-Y_H_i_s");
 
   //escreve os dados em arquivo txt
@@ -72,14 +69,21 @@ if ($i != 0) {
     fwrite($fp, "Cidade: " . $cidade . "\n");
     fwrite($fp, "Data: " . date("d-m-Y H:i:s") . "\n");
     fwrite($fp, "------------------------------------" . "\n");
-    fwrite($fp, "Filmes alugados: " . $titles . "\n");
-    fwrite($fp, "ID dos filmes alugados: " . $id . "\n");
-    fwrite($fp, "Valor pago nos filmes: " . $totalF . "\n");
-    fwrite($fp, "------------------------------------" . "\n");
-    fwrite($fp, "Series alugadas: " . $titlesSeries . "\n");
-    fwrite($fp, "ID das series alugadas: " . $idsSeries . "\n");
-    fwrite($fp, "Valor pago nas series: " . $totalS . "\n");
-    fwrite($fp, "------------------------------------" . "\n");
+    if ($totalF != 0) {
+      $totalF = "R$" . number_format($totalF, 2, ',', '.');
+      fwrite($fp, "Filmes alugados: " . $titles . "\n");
+      fwrite($fp, "ID dos filmes alugados: " . $id . "\n");
+      fwrite($fp, "Valor pago nos filmes: " . $totalF . "\n");
+      fwrite($fp, "------------------------------------" . "\n");
+    }
+    if ($totalS != 0) {
+      $totalS = "R$" . number_format($totalS, 2, ',', '.');
+      fwrite($fp, "Series alugadas: " . $titlesSeries . "\n");
+      fwrite($fp, "ID das series alugadas: " . $idsSeries . "\n");
+      fwrite($fp, "Valor pago nas series: " . $totalS . "\n");
+      fwrite($fp, "------------------------------------" . "\n");
+    }
+    $totalT = "R$" . number_format($totalT, 2, ',', '.');
     fwrite($fp, "Valor total: " . $totalT . "\n");
     fclose($fp);
   }
@@ -88,6 +92,8 @@ if ($i != 0) {
     // Define uma data de validade passada para o cookie
     setcookie($key, '', time() - 3600, '/');
   }
+}else{
+  header('Location: http://localhost/');
 }
 include '../components/finaly.php';
 ?>
